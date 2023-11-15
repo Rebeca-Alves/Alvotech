@@ -58,21 +58,6 @@ const MapComponent: React.FC<MapComponentProps> = (props) => {
       {props?.visible && (
         <CSSTransition in={true} appear={true} timeout={2000} classNames="fade">
           <MenuBox>
-            <BoxOpenClose onClick={() => props?.handleMenu(false)} className="Botão">
-              <svg
-                width="37"
-                height="33"
-                viewBox="0 0 37 33"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M0 0V4.625H37V0H0ZM0 13.7362V18.3612H37V13.7362H0ZM0 27.6112V32.2362H37V27.6112H0Z"
-                  fill="white"
-                />
-              </svg>
-            </BoxOpenClose>
-
             <MenuBoxList>
               <ListItem>
                 <ItemIcon src={homeIcon} /> Início
