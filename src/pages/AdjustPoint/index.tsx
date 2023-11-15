@@ -26,7 +26,7 @@ const MapComponent: React.FC = () => {
 
       <Title>Central de ajuste de ponto</Title>
 
-      <Link to="/edit-point">
+      <Link to="/edicaoponto">
         <ButtonChangePage>
           <ButtonIcon>
             <svg
@@ -45,7 +45,7 @@ const MapComponent: React.FC = () => {
           Justificativa de correção de ponto
           <div></div>
         </ButtonChangePage>
-      </Link>
+        </Link>
 
       <ButtonChangePage>
         <ButtonIcon>

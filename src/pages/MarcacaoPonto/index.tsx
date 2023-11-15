@@ -1,9 +1,14 @@
+import {useState} from 'react';
 import Relogio from '../../components/Relogio';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate} from 'react-router-dom';
 import './marcacao.css'
+import Menu from '../../components/Menu'
+import Header from '../../components/Header';
+import {Title} from "../AdjustPoint/styles";
 
 function MarcarPonto() {
     let navigate = useNavigate();
+    const [menuActive, setMenuActive] = useState(false);
 
     const handleMark = () => {
         const dataHoraAtual = new Date();
@@ -12,12 +17,15 @@ function MarcarPonto() {
     };
 
     return (
-        <>
         <div className='container'>
             <div className="titulo">
-                <h1>Marcação de Ponto</h1>
-                <h2>Marque seu ponto</h2>
-            </div>
+                <Menu handleMenu={setMenuActive} visible={menuActive} />
+                <Header
+                handleMenu={setMenuActive}
+                visible={menuActive}
+                title="Marcar Ponto" menuActive={false}/>
+
+                 <Title>Marque seu ponto</Title>
             <div className='outros'>
                 <Relogio />
             </div>
@@ -25,7 +33,7 @@ function MarcarPonto() {
                 <button className="markButton" onClick={handleMark}>Marcar</button>
             </div>
         </div>
-    </>
+    </div>
     );
 }
 

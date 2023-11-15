@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "leaflet/dist/leaflet.css";
 import { BoxOpenClose, HeaderBox, MenuBoxLogo, Title } from "./styles";
 
-import Logo from "../../components/Img/Logo.png";
+import alvo from "../../components/Logo/alvo.png";
 import "../../pages/animation.css";
 
 interface MapComponentProps {
@@ -34,7 +34,7 @@ const MapComponent: React.FC<MapComponentProps> = (props) => {
   return (
     <div id="map-container" style={{ width: "100%" }}>
       <HeaderBox>
-        <MenuBoxLogo src={Logo} />
+        <MenuBoxLogo src={alvo} />
         <Title>{props.title}</Title>
         {!props.menuActive && (
           <BoxOpenClose onClick={() => props.handleMenu(true)}>

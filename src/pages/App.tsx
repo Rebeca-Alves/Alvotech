@@ -17,11 +17,10 @@ function App() {
         <Route path = '/login'element={<LoginPage/>} />
         <Route path="/marcacao" element={<MarcacaoPonto />} />
         <Route path="/confirmacao" element={<ConfirmacaoPonto />} />
-        <Route path="/home" element={<Home />} />
         <Route path="/ajusteponto" element={<AdjustPoint />} />
         <Route path="/edicaoponto" element={<EditPoint />} />
         <Route path="/confirmacaoajuste" element={<PointConfirmation />} />
-
+        <Route path="/home" element={<Home />} />
       </Routes>
     </Router>
 

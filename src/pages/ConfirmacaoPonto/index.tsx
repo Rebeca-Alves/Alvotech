@@ -18,7 +18,7 @@ function ConfirmacaoMarcacao() {
   };
 
   const handleVoltarClick = () => {
-    navigate('/home');
+    navigate('/ajusteponto');
   };
 
   return (

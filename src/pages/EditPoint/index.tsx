@@ -12,13 +12,13 @@ import {
 } from "./styles";
 import { Link } from "react-router-dom";
 
-interface MapComponentProps {}
-
-const MapComponent: React.FC<MapComponentProps> = () => {
+const MapComponent: React.FC = () => {
   const [menuActive, setMenuActive] = useState(false);
 
   return (
-    <div id="map-container" style={{ height: "100vh", width: "100%", background: "#FFFFFF", textAlign: 'center' }}>
+    <div id="map-container" 
+    style={{ height: "100vh", width: "100%", background: "#FFFFFF", textAlign: 'center' }}>
+      
       <Menu handleMenu={setMenuActive} visible={menuActive} />
       <Header
               handleMenu={setMenuActive}
