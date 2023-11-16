@@ -8,7 +8,6 @@ import { Icon } from '@mui/material';
 interface QuadroProps {
   titulo: string;
   to: string;
-  icon: React.ReactElement;
 }
 
 const StyledQuadro = styled(Box)<{}>`
@@ -18,9 +17,9 @@ const StyledQuadro = styled(Box)<{}>`
     width: 230px;
     height: 200px;
     border-radius: 30px;
-     margin-right: 10px;
     align-items: center;
     justify-content: center;
+
 
 &:hover {
     border: 2px solid #46177D;
@@ -30,7 +29,6 @@ const StyledQuadro = styled(Box)<{}>`
 const Quadro: React.FC<QuadroProps> = ({ titulo, to, icon}) => (
   <Link to={to} style={{ textDecoration: 'none', color: 'inherit' }}>
     <StyledQuadro>
-        <Icon fontSize="large" />
       <Typography variant="subtitle1" className="titulo" textAlign="center">
         {titulo}
       </Typography>

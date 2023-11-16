@@ -2,8 +2,8 @@ import React, { useState} from "react";
 import Header from "../../components/Header";
 import Menu from "../../components/Menu";
 import StyledQuadro from '../../components/Quadro';
-import SearchIcon from '@mui/icons-material/Search';
-import HomeIcon from '@mui/icons-material/Home';
+import Banner from '../../components/Img/banner.png'
+import './style.css'
 
 const MapComponent: React.FC = () => {
   const [menuActive, setMenuActive] = useState(false);
@@ -16,10 +16,13 @@ const MapComponent: React.FC = () => {
               handleMenu={setMenuActive}
               visible={menuActive}
               title="SEJA BEM VINDO!" menuActive={false}/>
-      <StyledQuadro titulo="Marcar ponto" to="/marcacao"  icon={<SearchIcon />} />
-      <StyledQuadro titulo="Corrigir Ponto" to="/ajusteponto" icon={<HomeIcon />} />
-      <StyledQuadro titulo="Localização" to="/home" icon={<HomeIcon />} />
-      <StyledQuadro titulo="Notificações" to="/second" icon={<HomeIcon />} />
+        <img src={Banner} alt="" className="banner" />
+      <div className="quadros">
+        <StyledQuadro titulo="Marcar ponto" to="/marcacao" />
+        <StyledQuadro titulo="Corrigir Ponto" to="/ajusteponto" />
+        <StyledQuadro titulo="Localização" to="/home" />
+        <StyledQuadro titulo="Notificações" to="/second"/>
+      </div>
     </>
    );
   };

@@ -95,12 +95,12 @@ export const Title = styled.h1`
 export const ButtonChangePage = styled.button`
   border-radius: 16px;
   background: rgba(206, 200, 200, 0.87);
-  width: 600px;
-  height: 80px;
+  width: 400px;
+  height: 60px;
   color: #00d78b;
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 30px;
+  font-size: 20px;
   font-style: normal;
   font-weight: bolder;
   line-height: normal;
@@ -115,5 +115,4 @@ export const ButtonChangePage = styled.button`
 `;
 
 export const ButtonIcon = styled.div`
-  
 `;

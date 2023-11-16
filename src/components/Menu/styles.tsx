@@ -14,6 +14,7 @@ export const MenuBoxList = styled.ul`
   list-style: none;
   margin-top: 50px;
   text-align: left;
+  margin-left: 30px
 `;
 
 export const ListItem = styled.li`
