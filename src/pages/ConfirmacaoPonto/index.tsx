@@ -1,6 +1,10 @@
 import './confirmacao.css';
+import {useState} from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import Botao from '../../components/RedondoBotao';
+import Header from "../../components/Header";
+import Menu from "../../components/Menu";
+import {Title} from "../AdjustPoint/styles";
 
 
 interface PontoMarcadoState {
@@ -10,6 +14,7 @@ interface PontoMarcadoState {
 function ConfirmacaoMarcacao() {
   let navigate = useNavigate();
   let location = useLocation();
+  const [menuActive, setMenuActive] = useState(false);
 
   const { pontoMarcado } = location.state as PontoMarcadoState || {};
 
@@ -22,10 +27,16 @@ function ConfirmacaoMarcacao() {
   };
 
   return (
-    <div className="container">
-      <h1 className="title"></h1>
+    <div className="containerConfirmacao">
+      <div className="titulo">
+                <Menu handleMenu={setMenuActive} visible={menuActive} />
+                <Header
+                handleMenu={setMenuActive}
+                visible={menuActive}
+                title="Marcar Ponto" menuActive={false}/>
+
+                 <Title>Marcação Realizada!</Title>
       <div className="confirmationBox">
-        <div className="confirmationMessage">Marcação Realizada!</div>
         <Botao
           onClick={handleVoltarClick} 
           label={'<'}/>
@@ -41,6 +52,7 @@ function ConfirmacaoMarcacao() {
       <button className="backButton" onClick={handleBack}>
         Voltar para tela de marcação
       </button>
+    </div>
     </div>
   );
 }

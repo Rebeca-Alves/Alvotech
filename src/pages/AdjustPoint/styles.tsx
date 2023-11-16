@@ -95,8 +95,8 @@ export const Title = styled.h1`
 export const ButtonChangePage = styled.button`
   border-radius: 16px;
   background: rgba(206, 200, 200, 0.87);
-  width: 827px;
-  height: 117px;
+  width: 600px;
+  height: 80px;
   color: #00d78b;
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
@@ -114,4 +114,6 @@ export const ButtonChangePage = styled.button`
   text-decoration: none;
 `;
 
-export const ButtonIcon = styled.div``;
+export const ButtonIcon = styled.div`
+  
+`;

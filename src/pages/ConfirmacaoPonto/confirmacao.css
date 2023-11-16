@@ -1,0 +1,38 @@
+.containerConfirmacao {
+    text-align: center;
+    background-color: #fff;
+}
+
+.title {
+    color: #01d48e;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+.confirmationBox {
+    margin: 20px auto;
+    padding: 5px;
+    border: 2px dashed #46177D;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.confirmationMessage {
+    color: #01d48e;
+    margin-bottom: 20px;    
+}
+
+.backButton {
+    background-color: #46177D;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: center;
+}
+
+.backButton:hover {
+    background-color: #46177D;
+}

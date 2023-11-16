@@ -1,0 +1,18 @@
+.containerMarcacao {
+    margin: 0 auto;
+    text-align: center;
+    background-color: #fff;
+}
+
+.markButton {
+    background-color: #46177D;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.markButton:hover {
+    background-color: #46177D;
+}

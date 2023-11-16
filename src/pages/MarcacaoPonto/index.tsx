@@ -17,14 +17,13 @@ function MarcarPonto() {
     };
 
     return (
-        <div className='container'>
+        <div className='containerMarcacao'>
             <div className="titulo">
                 <Menu handleMenu={setMenuActive} visible={menuActive} />
                 <Header
                 handleMenu={setMenuActive}
                 visible={menuActive}
                 title="Marcar Ponto" menuActive={false}/>
-
                  <Title>Marque seu ponto</Title>
             <div className='outros'>
                 <Relogio />

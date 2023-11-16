@@ -1,0 +1,8 @@
+.relogioBox {
+    margin: 20px auto;
+    padding: 30px;
+    border: 2px dashed #46177D;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}

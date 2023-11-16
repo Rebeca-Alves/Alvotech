@@ -7,7 +7,7 @@ export const MenuBox = styled.div`
   position: absolute;
   z-index: 1001;
   padding: 10px;
-  font-size: 50px;    
+  font-size: 50px;
 `;
 
 export const MenuBoxList = styled.ul`
@@ -22,6 +22,7 @@ export const ListItem = styled.li`
   display: flex;
   align-items: center;
   color: white;
+  margin: 10 px 0;
 `;
 
 export const ItemIcon = styled.img`

@@ -27,7 +27,7 @@ function FormLogin() {
       const navigate = useNavigate();
 
       const handleEntrarClick = () => {
-        navigate('/marcacao');
+        navigate('/homeoficial');
       };
 
     return(

@@ -7,6 +7,7 @@ import EditPoint from "./EditPoint";
 import PointConfirmation from "./PointConfirmation";
 import AdjustPoint from "./AdjustPoint";
 import Home from './Home';
+import HomeOficial from './HomeOficial'
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <Routes>
         <Route path = '/'element={<CadastroPage/>} />
         <Route path = '/login'element={<LoginPage/>} />
+        <Route path = '/homeoficial'element={<HomeOficial/>} />
         <Route path="/marcacao" element={<MarcacaoPonto />} />
         <Route path="/confirmacao" element={<ConfirmacaoPonto />} />
         <Route path="/ajusteponto" element={<AdjustPoint />} />
