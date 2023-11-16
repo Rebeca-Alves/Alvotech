@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Header from "../../components/Header";
 import Menu from "../../components/Menu";
 import { ButtonChangePage, ButtonIcon, Title } from "./styles";
@@ -6,18 +6,10 @@ import clockIcon from "../../components/Img/clock.png";
 import { Link } from "react-router-dom";
 
 const MapComponent: React.FC = () => {
-  const [, setPosition] = useState([-8.047562, -34.877523]);
   const [menuActive, setMenuActive] = useState(false);
 
-  useEffect(() => {
-    setPosition([-8.047562, -34.877523]);
-  }, []); 
-
   return (
-    <div
-      id="map-container"
-      style={{ height: "100vh", width: "100%", background: "#FFFFFF", textAlign: 'center' }}
-    >
+    <>
       <Menu handleMenu={setMenuActive} visible={menuActive} />
       <Header
               handleMenu={setMenuActive}
@@ -54,7 +46,7 @@ const MapComponent: React.FC = () => {
         Histórico de entradas e saídas
         <div></div>
       </ButtonChangePage>
-    </div>
+    </>
   );
 };
 
