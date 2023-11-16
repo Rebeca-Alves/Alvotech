@@ -16,7 +16,9 @@ const MapComponent: React.FC = () => {
   const [menuActive, setMenuActive] = useState(false);
 
   return (
-    <> 
+    <div id="map-container" 
+    style={{ height: "100vh", width: "100%", background: "#FFFFFF", textAlign: 'center' }}>
+      
       <Menu handleMenu={setMenuActive} visible={menuActive} />
       <Header
               handleMenu={setMenuActive}
@@ -46,7 +48,7 @@ const MapComponent: React.FC = () => {
       <Description>Anexe o arquivo em formato PDF, DOCX</Description>
 
       <Link to="/confirmacaoajuste"><ButtonSend>Enviar</ButtonSend></Link>
-    </>
+    </div>
   );
 };
 
