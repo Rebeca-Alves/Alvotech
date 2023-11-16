@@ -1,27 +1,27 @@
-import React, { useState, useEffect } from "react";
+import React, { useState} from "react";
 import Header from "../../components/Header";
 import Menu from "../../components/Menu";
+import StyledQuadro from '../../components/Quadro';
+import SearchIcon from '@mui/icons-material/Search';
+import HomeIcon from '@mui/icons-material/Home';
 
 const MapComponent: React.FC = () => {
-  const [, setPosition] = useState([-8.047562, -34.877523]);
   const [menuActive, setMenuActive] = useState(false);
 
-  useEffect(() => {
-    setPosition([-8.047562, -34.877523]);
-  }, []); 
 
   return (
-    <div
-      id="map-container"
-      style={{ height: "100vh", width: "100%", background: "#FFFFFF", textAlign: 'center' }}
-    >
+    <>
       <Menu handleMenu={setMenuActive} visible={menuActive} />
       <Header
               handleMenu={setMenuActive}
               visible={menuActive}
               title="SEJA BEM VINDO!" menuActive={false}/>
-    </div>
- );
-};
+      <StyledQuadro titulo="Marcar ponto" to="/marcacao"  icon={<SearchIcon />} />
+      <StyledQuadro titulo="Corrigir Ponto" to="/ajusteponto" icon={<HomeIcon />} />
+      <StyledQuadro titulo="Localização" to="/home" icon={<HomeIcon />} />
+      <StyledQuadro titulo="Notificações" to="/second" icon={<HomeIcon />} />
+    </>
+   );
+  };
 
 export default MapComponent;

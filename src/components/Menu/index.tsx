@@ -46,7 +46,7 @@ const MapComponent: React.FC<MapComponentProps> = (props) => {
             </BoxOpenClose>
             <MenuBoxList>
               <ListItem>
-                <Link to="/marcacao" style={{ color: 'white', textDecoration: 'none' }}> 
+                <Link to="/HomeOficial" style={{ color: 'white', textDecoration: 'none' }}> 
                   <ItemIcon src={homeIcon} /> Início
                 </Link>
               </ListItem>

@@ -1,7 +1,6 @@
 import './confirmacao.css';
 import {useState} from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import Botao from '../../components/RedondoBotao';
 import Header from "../../components/Header";
 import Menu from "../../components/Menu";
 import {Title} from "../AdjustPoint/styles";
@@ -22,10 +21,6 @@ function ConfirmacaoMarcacao() {
     navigate('/marcacao');
   };
 
-  const handleVoltarClick = () => {
-    navigate('/ajusteponto');
-  };
-
   return (
     <div className="containerConfirmacao">
       <div className="titulo">
@@ -37,9 +32,6 @@ function ConfirmacaoMarcacao() {
 
                  <Title>Marcação Realizada!</Title>
       <div className="confirmationBox">
-        <Botao
-          onClick={handleVoltarClick} 
-          label={'<'}/>
         {pontoMarcado && (
           <p>
             Data da marcação: {pontoMarcado.toLocaleDateString()}
