@@ -18,7 +18,7 @@ function ConfirmacaoMarcacao() {
   const { pontoMarcado } = location.state as PontoMarcadoState || {};
 
   const handleBack = () => {
-    navigate('/marcacao');
+    navigate('/HomeOficial');
   };
 
   return (
@@ -42,7 +42,7 @@ function ConfirmacaoMarcacao() {
         )}
       </div>
       <button className="backButton" onClick={handleBack}>
-        Voltar para tela de marcação
+        Voltar para tela inicial
       </button>
     </div>
     </div>

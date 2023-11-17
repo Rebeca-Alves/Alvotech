@@ -10,22 +10,6 @@ export const ButtonBox = styled.div`
   right: 0;
 `;
 
-export const ButtonConfirm = styled.button`
-  background-color: #46177d;
-  width: 410.52px;
-  height: 68.42px;
-  border-radius: 10px;
-  color: #fff;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  border: none;
-  outline: 0;
-  position: relative;
-`;
-
 export const File = styled.input`
   width: 500px;
   height: 55px;
@@ -34,7 +18,7 @@ export const File = styled.input`
   right: 0;
   margin: 0;
   padding: 0;
-  font-size: 20px; /* Adjust as needed to cover the button */
+  font-size: 20px;
   cursor: pointer;
   opacity: 0;
 `;

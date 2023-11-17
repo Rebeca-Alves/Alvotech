@@ -21,7 +21,7 @@ const MapComponent: React.FC = () => {
         <StyledQuadro titulo="Marcar ponto" to="/marcacao" />
         <StyledQuadro titulo="Corrigir Ponto" to="/ajusteponto" />
         <StyledQuadro titulo="Localização" to="/home" />
-        <StyledQuadro titulo="Notificações" to="/second"/>
+        <StyledQuadro titulo="Histórico" to="/historico"/>
       </div>
     </>
    );

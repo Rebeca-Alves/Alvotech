@@ -12,7 +12,7 @@ function CadastroPage() {
   };
 
   return (
-    <div className="Container">
+     <div className='container'>
        <div className="Cadastro">
         <img src={alvo} alt="alvo.png" />
           <h2>SEJA BEM VINDO(A)!</h2>
@@ -24,6 +24,7 @@ function CadastroPage() {
             </div>
           </div>
         <Form/>
+        
       </div>
     );
   } 

@@ -100,7 +100,7 @@ export const ButtonChangePage = styled.button`
   color: #00d78b;
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 20px;
+  font-size: 16px;
   font-style: normal;
   font-weight: bolder;
   line-height: normal;
@@ -112,7 +112,4 @@ export const ButtonChangePage = styled.button`
   margin: auto;
   margin-top: 75px;
   text-decoration: none;
-`;
-
-export const ButtonIcon = styled.div`
 `;

@@ -1,0 +1,32 @@
+.Container{
+    width: 50%;
+    height: 100vh;
+    background: #46177D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Login{
+    width: 40%;
+}
+.Login > img{
+    width: 20vw;
+    height: 20vh;
+    position: relative;
+    top: -80px;
+    left: 130px;
+}
+.Login > h2{
+    color: white;
+    margin-top: 0px;
+    font-family: 'Concert One';
+    position: relative;
+    left: 140px
+}
+.Login > h4{
+    color: white;
+    margin-top: 0px;
+    font-family: 'Concert One';
+    position: relative;
+    left: 200px;
+}

@@ -1,0 +1,36 @@
+.entrada, .intervalo, .retorno, .saida{
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+}
+.div__entrada, .div__intervalo, .div__retorno, .div__saida{
+    font-family: 'Montserrat', sans-serif;
+    color:rgba(108, 115, 112, 1) ;
+    background-color:rgba(206, 200, 200, 1) ;
+    padding: 1.3rem ;
+    text-transform: uppercase;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    width: 12rem;
+    height: 4rem;
+    font-size: 1.4rem;
+    text-align: left;
+    position: relative;
+    top: 18px;
+    
+}
+.horario__entrada, .horario__intervalo, .horario__retorno, .horario__saida{
+ border: none;
+ color: white;
+ background-color:rgba(206, 200, 200, 1) ;
+ margin-left: 0.1rem;
+ font-size: 2rem;
+ font-family:'Montserrat', sans-serif;
+ outline: none;
+ border-top-right-radius: 15px;
+ border-end-end-radius: 15px;
+ width: 10rem;
+ text-align: right;
+ position: relative;
+ top: 18px;
+}

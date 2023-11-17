@@ -1,0 +1,33 @@
+.container{
+    width: 50%;
+    height: 100vh;
+    background: #46177D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Cadastro{
+    width: 40%;
+}
+.Cadastro > img{
+    width: 20vw;
+    height: 20vh;
+    position: relative;
+    top: -80px;
+    left: 130px;
+}
+.Cadastro > h2{
+    color: white;
+    margin-top: 0px;
+    font-family: 'Concert One';
+    position: relative;
+    left: 140px
+}
+.Cadastro > h4{
+    color: white;
+    margin-top: 0px;
+    font-family: 'Concert One';
+    position: relative;
+    left: 200px;
+}
+

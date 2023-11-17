@@ -34,7 +34,7 @@ export const File = styled.input`
   right: 0;
   margin: 0;
   padding: 0;
-  font-size: 20px; /* Adjust as needed to cover the button */
+  font-size: 20px; 
   cursor: pointer;
   opacity: 0;
 `;

@@ -1,0 +1,46 @@
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    position: relative;
+    top: 0px;
+    left: 540px;
+  }
+  .inputContainer {
+    margin-bottom: 20px;
+  }
+  .inputContainer > h2{
+    color: #46177D;
+    margin-top: 0px;
+    font-family: 'Concert One';
+    position: relative;
+    left: 100px;
+  }
+  .inputContainer label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+  }
+  .inputContainer input {
+    width: 150%;
+    padding: 16px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background: #D1CDCD;
+    font-size: 12pt;
+  }
+  .inputContainer input::placeholder{
+    font-style: italic;
+    font-family: 'ABeeZee';
+  }
+  .error {
+    color: #ff0000;
+    margin-top: 5px;
+    font-size: 14px;
+  }
+  .aviso {
+    color: #4caf50;
+    margin-top: 10px;
+    font-size: 16px;
+  }

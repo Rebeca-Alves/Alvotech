@@ -8,6 +8,8 @@ import PointConfirmation from "./PointConfirmation";
 import AdjustPoint from "./AdjustPoint";
 import Home from './Home';
 import HomeOficial from './HomeOficial'
+import Historico from './Histórico'
+import EntradaSaida from './EntradaSaida'
 
 
 function App() {
@@ -17,6 +19,8 @@ function App() {
         <Route path = '/'element={<CadastroPage/>} />
         <Route path = '/login'element={<LoginPage/>} />
         <Route path = '/homeoficial'element={<HomeOficial/>} />
+        <Route path = '/historico'element={<Historico/>} />
+        <Route path="/entradasaida" element={<EntradaSaida />} />
         <Route path="/marcacao" element={<MarcacaoPonto />} />
         <Route path="/confirmacao" element={<ConfirmacaoPonto />} />
         <Route path="/ajusteponto" element={<AdjustPoint />} />

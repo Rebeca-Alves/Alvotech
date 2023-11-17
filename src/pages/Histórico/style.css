@@ -1,0 +1,46 @@
+.data{
+    display: flex;
+    justify-content: center;
+}
+.data__div{
+    background-color: rgb(70, 23, 125, 1);
+    height: 6.25rem;
+    text-align: center;
+    border-radius: 15px;
+    position: relative;
+    top: 20px;
+}
+
+.data__inicio{
+    color: white;
+    height: 50px;
+}
+.data__inicio > p{
+    position: relative;
+    top: 20px;
+}
+.data__input{
+    color:rgb(0, 0, 0);
+    background-color: rgb(206, 200, 200, 1);
+    padding: 1.1rem 4.15625rem;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+.buttonVerificar{
+    color: white;
+    background-color: rgb(70, 23, 125, 1);
+    border-color: white;
+    border-radius: 10px;
+    width: 14rem;
+    cursor: pointer;
+}
+.button{
+    margin-top: 45px;
+    display: flex;
+    justify-content: center;
+    height: 3.0rem;
+}

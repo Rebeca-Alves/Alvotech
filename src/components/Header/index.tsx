@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "leaflet/dist/leaflet.css";
 import { BoxOpenClose, HeaderBox, MenuBoxLogo, Title } from "./styles";
-
 import alvo from "../../components/Logo/alvo.png";
 import "../../pages/animation.css";
 
