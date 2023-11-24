@@ -5,15 +5,29 @@ import './marcacao.css'
 import Menu from '../../components/Menu'
 import Header from '../../components/Header';
 import {Title} from "../AdjustPoint/styles";
+import { API } from '../../config';
 
 function MarcarPonto() {
     let navigate = useNavigate();
     const [menuActive, setMenuActive] = useState(false);
 
-    const handleMark = () => {
+    const handleMark = async () => {
         const dataHoraAtual = new Date();
 
-        navigate('/confirmacao', { state: { pontoMarcado: dataHoraAtual } });
+        let data = {
+            "user_id": 1,
+            "latitude": 0,
+            "longitude": 0
+        }
+
+        try {
+            let response = await API.post('/criar_ponto', data);
+
+            navigate('/confirmacao', { state: { pontoMarcado: dataHoraAtual } });
+          } catch (error) {
+            alert("Erro!!");
+          }
+
     };
 
     return (
