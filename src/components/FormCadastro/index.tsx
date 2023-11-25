@@ -24,7 +24,7 @@ const Form = () => {
   const { control, handleSubmit, formState: { errors } } = useForm<Usuario>({
     resolver: yupResolver(schema),
   });
-
+  
   const navigate = useNavigate();
     const onSubmit: SubmitHandler<Usuario> = async (user) => {
     let data = {
