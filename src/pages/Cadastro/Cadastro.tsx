@@ -24,7 +24,6 @@ function CadastroPage() {
             </div>
           </div>
         <Form/>
-        
       </div>
     );
   } 

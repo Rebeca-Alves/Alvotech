@@ -12,7 +12,7 @@ interface Usuario {
 }
 
 const schema = yup.object().shape({
-  email: yup.string().required("Campo obrigatório!!!").required("Email não registrado"),
+  email: yup.string().required("Este campo é obrigatório").required("Email não registrado"),
   senha: yup
     .string()
     .min(8, "A senha deve ter no mínimo 8 caracteres")

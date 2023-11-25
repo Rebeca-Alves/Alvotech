@@ -14,7 +14,7 @@ interface Usuario {
 
 const schema = yup.object().shape({
     nome: yup.string().required('Este campo é obrigatório'),
-    email: yup.string().required('Este campo é obrigatório').required('Este campo é obrigatório'),
+    email: yup.string().email('Email inválido').required('Este campo é obrigatório'),
     senha: yup.string().min(8, 'A senha deve ter no mínimo 8 caracteres').required('Este campo é obrigatório'),
   });
 
@@ -29,18 +29,17 @@ function Form() {
     const onSubmit = async (user: Usuario) => {
       let data = {
           username: user.nome, 
-          email: user.nome, 
+          email: user.email, 
           password: user.senha, 
       }
 
       try {
         let response = await API.post('/cadastrar', data);
-
         setAviso('Cadastro realizado com sucesso!');
 
         navigate('/homeoficial');
       } catch (error) {
-        setAviso("Erro no cadastro!!!");
+        setAviso("Erro ao cadastrar");
       }
 
     };
