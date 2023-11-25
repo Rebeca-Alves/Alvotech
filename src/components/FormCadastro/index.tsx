@@ -26,8 +26,7 @@ const Form = () => {
   });
 
   const navigate = useNavigate();
-
-  const onSubmit: SubmitHandler<Usuario> = async (user) => {
+    const onSubmit: SubmitHandler<Usuario> = async (user) => {
     let data = {
       name: user.name,
       email: user.email,
