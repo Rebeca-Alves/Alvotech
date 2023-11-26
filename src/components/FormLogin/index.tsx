@@ -3,51 +3,30 @@ import * as yup from "yup";
 import { useForm, Controller } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useNavigate } from "react-router-dom";
-import { API } from "../../config";
-
 interface Usuario {
   email: string;
   senha: string;
-  nome: string;
 }
 
 const schema = yup.object().shape({
-  email: yup.string().required("Este campo é obrigatório").required("Email não registrado"),
-  senha: yup
-    .string()
-    .min(8, "A senha deve ter no mínimo 8 caracteres")
-    .required("Senha incorreta"),
+  email: yup.string().email('Email inválido').required('Email não registrado'),
+  senha: yup.string().min(8, 'A senha deve ter no mínimo 8 caracteres').required('Senha incorreta'),
 });
 
 function FormLogin() {
-  const {
-    control,
-    handleSubmit,
-    formState: { errors },
-  } = useForm<Usuario>({
+  const { control, handleSubmit, formState: { errors } } = useForm<Usuario>({
     resolver: yupResolver(schema),
   });
 
-  const onSubmit = async (user: Usuario) => {
-    let data = {
-      username: user.email,
-      password: user.senha,
+  const onSubmit = (data: Usuario) => {
+      console.log(data);
     };
 
-    try {
-      let response = await API.post("/login", data);
+    const navigate = useNavigate();
 
-      navigate("/homeoficial");
-    } catch (error:any) {
-      alert("Email ou senha inválidos")
-    }
-  };
-
-  const navigate = useNavigate();
-
-  const handleEntrarClick = () => {
-    // navigate('/homeoficial');
-  };
+    const handleEntrarClick = () => {
+      navigate('/homeOficial');
+    };
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>

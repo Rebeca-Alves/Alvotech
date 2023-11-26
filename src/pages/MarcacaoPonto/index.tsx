@@ -12,8 +12,6 @@ function MarcarPonto() {
 
     const handleMark = () => {
         const dataHoraAtual = new Date();
-
-        navigate('/confirmacao', { state: { pontoMarcado: dataHoraAtual } });
     };
 
     return (
