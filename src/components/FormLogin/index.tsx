@@ -3,14 +3,15 @@ import * as yup from "yup";
 import { useForm, Controller } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useNavigate } from "react-router-dom";
+import { API } from '../../api';
 interface Usuario {
   email: string;
-  senha: string;
+  password: string;
 }
 
 const schema = yup.object().shape({
   email: yup.string().email('Email inválido').required('Email não registrado'),
-  senha: yup.string().min(8, 'A senha deve ter no mínimo 8 caracteres').required('Senha incorreta'),
+  password: yup.string().min(8, 'A senha deve ter no mínimo 8 caracteres').required('Senha incorreta'),
 });
 
 function FormLogin() {
@@ -18,16 +19,28 @@ function FormLogin() {
     resolver: yupResolver(schema),
   });
 
-  const onSubmit = (data: Usuario) => {
-      console.log(data);
-    };
+  const navigate = useNavigate();
 
-    const navigate = useNavigate();
+  const onSubmit = async (user: Usuario) => {
+    try {
+      const response = await API.post('/login', {
+        email: user.email,
+        password: user.password,
+      });
 
-    const handleEntrarClick = () => {
-      navigate('/homeOficial');
-    };
-
+      if (response.status === 200) {
+          navigate("/homeoficial");
+      } else if (response.status === 401){
+        alert('Email ou senha inválidos');
+      } else{
+        alert('Erro ao fazer login');
+      }
+    } catch (error) {
+      console.error(error);
+      alert("Email ou senha inválidos");
+    }
+  };
+  
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <div className="inputContainer">
@@ -50,21 +63,21 @@ function FormLogin() {
       <div className="inputContainer">
         <label htmlFor="password"></label>
         <Controller
-          name="senha"
+          name="password"
           control={control}
           render={({ field }) => (
             <input
               type="password"
-              id="senha"
+              id="password"
               {...field}
               placeholder="Digite sua senha"
             />
           )}
         />
-        {errors.senha && <div className="error">{errors.senha.message}</div>}
+        {errors.password && <div className="error">{errors.password.message}</div>}
       </div>
       <div style={{ marginLeft: "80px" }}>
-        <Button texto="Entrar" onClick={handleEntrarClick} />
+        <Button texto="Entrar" type="submit" />
       </div>
     </form>
   );

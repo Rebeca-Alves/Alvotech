@@ -4,6 +4,7 @@ type ButtonProps = {
     texto: string;
     onClick?: () => void;
     className?: string;
+    type?: string;
   };
   
   function Button(props: ButtonProps) {
